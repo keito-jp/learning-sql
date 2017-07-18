@@ -1,0 +1,9 @@
+version: '2'
+services:
+  mysql:
+    build: .
+    volumes:
+      - ./LearningSQLExample.sql:/docker-entrypoint-initdb.d/LearningSQLExample.sql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_DATABASE=bank
